@@ -1,0 +1,100 @@
+
+.signup, .login , .registration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    font-family: sans-serif;
+}
+
+
+.signup form ,  .login form, .registration form{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    h1 {
+        margin-bottom: 20px;
+        margin: 20px auto;
+    }
+
+    label {
+        margin-bottom: 5px;
+    }
+
+    input {
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    button {
+        padding: 10px;
+        background-color: #2d0de0;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin: 10px 0;
+    }
+
+    button:hover {
+        background-color: #2adf12;
+        color: black;
+    }
+
+    p {
+        margin-top: 16px;
+        text-align: center;
+
+        a {
+            color: #053cf1;
+            text-decoration: none;
+        }
+
+
+        a:hover {
+            text-decoration: underline;
+            color: #f50909;
+        }
+    }
+
+    
+    
+}
+
+
+
+
+
+
+
+.login form{
+    height: 430px;
+    width: 370px;
+
+    h1{
+        margin: 30px auto 60px;
+        font-size: 28px;
+    }
+
+    button{
+        margin: 20px 0;
+    }
+
+    input{
+        margin-bottom: 20px;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+}
