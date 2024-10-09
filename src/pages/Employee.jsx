@@ -44,7 +44,7 @@ const Employee = () => {
                 <td>{emp.email}</td>
                 <td>{emp.phone}</td>
                 <td>{emp.address}</td>
-                <td><Link><button>Edit</button></Link></td>
+                <td><Link to={`edit/`}><button>Edit</button></Link></td>
                 <td><button id="delete" onClick={()=>{handleDelete(emp.id)}}>Delete</button></td>
               </tr>
             );

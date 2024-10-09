@@ -1,5 +1,5 @@
 import React from 'react'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createHashRouter, RouterProvider } from 'react-router-dom'
 
 // css
 import './auth/Auth.css'
@@ -14,21 +14,29 @@ import Home from './pages/Home'
 import Registration from './pages/Registration'
 import Employee from './pages/Employee'
 import Contact from './pages/Contact'
+import Authroot from './auth/Authroot'
+import EditEmployee from './pages/EditEmployee'
 
 const App = () => {
 
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path: '/',
-      element: <Login/>
-    },
-    {
-      path: '/login',
-      element: <Login/>
-    },
-    {
-      path: '/signup',
-      element: <Signup/>
+      element: <Authroot/>,
+      children: [
+        {
+          path: '/',
+          element: <Login/>
+        },
+        {
+          path: '/login',
+          element: <Login/>
+        },
+        {
+          path: '/signup',
+          element: <Signup/>
+        }
+      ]
     },
     {
       path: '/root',
@@ -49,6 +57,10 @@ const App = () => {
         {
           path: '/root/employee',
           element: <Employee/>
+        },
+        {
+          path: '/root/edit/:id',
+          element: <EditEmployee/>
         },
         {
           path: '/root/contact',

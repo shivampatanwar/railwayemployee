@@ -55,7 +55,7 @@ const Registration = () => {
 
         <input
           type="text"
-          placeholder="name"
+          placeholder="Name"
           id="name"
           value={name}
           name="name"
@@ -64,7 +64,7 @@ const Registration = () => {
 
         <input
           type="text"
-          placeholder="email"
+          placeholder="Email"
           id="email"
           value={email}
           name="email"
@@ -73,7 +73,7 @@ const Registration = () => {
 
         <input
           type="text"
-          placeholder="phone"
+          placeholder="Phone"
           id="phone"
           value={phone}
           name="phone"
@@ -82,7 +82,7 @@ const Registration = () => {
 
         <input
           type="text"
-          placeholder="designation"
+          placeholder="Designation"
           id="designation"
           value={designation}
           name="designation"
@@ -91,7 +91,7 @@ const Registration = () => {
 
         <input
           type="text"
-          placeholder="address"
+          placeholder="Address"
           id="address"
           value={address}
           name="address"

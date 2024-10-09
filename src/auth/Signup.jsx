@@ -56,50 +56,50 @@ const Signup = () => {
       <form onSubmit={handleSubmit}>
         <h1>Signup</h1>
 
-        <label htmlFor="name">Name : </label>
+        {/* <label htmlFor="name">Name : </label> */}
         <input
           type="text"
-          placeholder="name"
+          placeholder="Name"
           id="name"
           value={name}
           name="name"
           onChange={handleChange}
         />
 
-        <label htmlFor="username">Username : </label>
+        {/* <label htmlFor="username">Username : </label> */}
         <input
           type="text"
-          placeholder="username"
+          placeholder="Username"
           id="username"
           value={username}
           name="username"
           onChange={handleChange}
         />
 
-        <label htmlFor="email">Email : </label>
+        {/* <label htmlFor="email">Email : </label> */}
         <input
           type="text"
-          placeholder="email"
+          placeholder="Email"
           id="email"
           value={email}
           name="email"
           onChange={handleChange}
         />
 
-        <label htmlFor="phone">Phone : </label>
+        {/* <label htmlFor="phone">Phone : </label> */}
         <input
           type="text"
-          placeholder="phone"
+          placeholder="Phone"
           id="phone"
           value={phone}
           name="phone"
           onChange={handleChange}
         />
 
-        <label htmlFor="password">Password : </label>
+        {/* <label htmlFor="password">Password : </label> */}
         <input
           type="password"
-          placeholder="password"
+          placeholder="Password"
           id="password"
           value={password}
           name="password"
