@@ -3,7 +3,7 @@ import { Link, Outlet } from 'react-router-dom'
 
 const Root = () => {
   return (
-    <div className='root'>
+    <div className='root' id='root'>
 
       <div className='header'>
         <h1>Railway Employee Management</h1>
