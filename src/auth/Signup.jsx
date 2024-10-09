@@ -36,6 +36,51 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    
+        // Form validation
+        const errors = {};
+        
+        if (!name.trim()) {
+          errors.name = "Name is required";
+        }else if (name.length < 3) {
+          errors.username = "Name must be at least 3 characters long";
+        }
+        
+        if (!username.trim()) {
+          errors.username = "Username is required";
+        } else if (username.length < 3) {
+          errors.username = "Username must be at least 3 characters long";
+        }
+        
+        if (!email.trim()) {
+          errors.email = "Email is required";
+        } else if (!/\S+@\S+\.\S+/.test(email)) {
+          errors.email = "Email is invalid";
+        }
+        
+        if (!phone.trim()) {
+          errors.phone = "Phone number is required";
+        } else if (!/^\d{10}$/.test(phone)) {
+          errors.phone = "Phone number must be 10 digits";
+        }
+        
+        if (!password.trim()) {
+          errors.password = "Password is required";
+        } else if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[ -/:-@\[-`{-~]).{6,64}$/.test(password)) {
+          errors.password = "Password must be at least 6 characters,  1 lowercase  1 uppercase  1 number  1 special characters";
+        }
+        
+        if (Object.keys(errors).length > 0) {
+          // If there are errors, display them and prevent form submission
+          Object.keys(errors).forEach(key => {
+            alert(errors[key]);
+          });
+          return;
+        }
+    
+        // If validation passes, continue with the existing logic
+    
+
     const userExists = employeesData.some((emp) => 
       emp.username === username || emp.email === email || emp.phone === phone
     );
@@ -50,6 +95,7 @@ const Signup = () => {
       navigate("/login");
     }
   };
+
 
   return (
     <div className="signup">

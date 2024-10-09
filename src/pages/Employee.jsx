@@ -32,6 +32,7 @@ const Employee = () => {
             <th>Name</th>
             <th>Email</th>
             <th>Phone</th>
+            <th>Designation</th>
             <th>Address</th>
             <th>Edit</th>
             <th>Delete</th>
@@ -45,6 +46,7 @@ const Employee = () => {
                 <td>{emp.name}</td>
                 <td>{emp.email}</td>
                 <td>{emp.phone}</td>
+                <td>{emp.designation}</td>
                 <td>{emp.address}</td>
                 <td><Link to={`/root/edit/${emp.id}`}><button>Edit</button></Link></td>
                 <td><button id="delete" onClick={()=>{handleDelete(emp.id)}}>Delete</button></td>
