@@ -43,6 +43,14 @@ const EditEmployee = () => {
     await axios.put(`${url}/${id}`, employees);
     alert("Updation Successful");
     navigate("/root/employee");
+    setEmployees({
+      id: id,
+      name: "",
+      email: "",
+      phone: "",
+      designation: "",
+      address: "",
+    });
     
   };
 
